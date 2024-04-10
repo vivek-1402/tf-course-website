@@ -53,5 +53,5 @@ resource "google_compute_firewall" "allow-internal" {
     protocol = "udp"
     ports    = ["0-65535"]
   }
-  source_ranges = [for region in var.regions: var.subnet_cidrs[region]] 
+  source_ranges = [for region in var.regions : var.subnet_cidrs[region]]
 }

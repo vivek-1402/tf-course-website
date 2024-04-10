@@ -5,14 +5,14 @@ variable "project_id" {
 
 variable "project" {
   description = "The application project name"
-  type    = string
-  default = "my-application"
+  type        = string
+  default     = "my-application"
 }
 
 variable "regions" {
   description = "A set of regions to use for the deployment"
-  type    = set(string)
-  default = ["us-central1"]
+  type        = set(string)
+  default     = ["us-central1"]
 }
 
 variable "subnet_cidrs" {

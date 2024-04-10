@@ -39,7 +39,7 @@ resource "google_compute_region_instance_group_manager" "instance_group" {
     instance_template = google_compute_instance_template.instance_template[each.value].id
     name              = "primary"
   }
-  
+
   base_instance_name = "${var.project}-webserver-${terraform.workspace}"
   target_size        = var.instance_count
 }
